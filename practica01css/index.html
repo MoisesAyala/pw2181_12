@@ -3,11 +3,12 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Práctica 01 CSS3</title>
+	<link rel="stylesheet" href="css/estilos.css">
 </head>
 <body>
 	<header>
 		<img src="img/resplandor.png" alt="">
-		<img src="img/logo.png" alt="">
+		<img src="img/logo.png" id="logo" alt="">
 		<nav>
 			<ul>
 				<li>Inicio</li>
@@ -17,26 +18,29 @@
 				<li>Seccion</li>
 				<li>Sección</li>
 			</ul>
-			<form action="#"></form>
+			<form action="#">
 			<input type="search" placeholder="Buscar aquí....">
 			<input type="button" value="Buscar">
+			</form>
 		</nav>
 	</header>
-	<section>
+	<section id="seccion01">
 		<article>
 			<img src="img/slide2.jpg" alt="">
 		</article>
 	</section>
-	<section>
+	<section id="seccion02">
 		<article><img src="img/separador.jpg" alt="">
 			<br>
-			Una sección
+			<span class="unaSeccion">Una sección</span>
 			<br>
 			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti laborum, repudiandae quia eveniet, commodi accusamus magnam saepe odit, laudantium eius modi iste facere officia reprehenderit veritatis. Doloremque culpa, non dignissimos?
 			<p></p>
 			<input type="submit" value="Ver más">
 		</article>
 		<article><img src="img/separador.jpg" alt="">
+			<br>
+			<span id="otraSeccion">Otra sección</span>
 			<br>
 			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia adipisci repudiandae, perspiciatis ratione debitis atque dolor voluptates odio qui iusto cupiditate iste minus voluptatem mollitia natus ab voluptatibus sit similique.
 			<br>
@@ -46,7 +50,7 @@
 		</article>
 		<article><img src="img/separador.jpg" alt="">
 			<br>
-			Un vídeo
+			<span class="otraSeccion">Un vídeo</span>
 			<br>
 			<img src="img/video.jpg" alt="">
 		</article>
