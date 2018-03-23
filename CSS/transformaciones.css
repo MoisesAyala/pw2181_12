@@ -1,0 +1,32 @@
+article{
+	background: blue;
+	border:2px solid black;
+	color: black;
+	margin: 20px 50px;
+	padding: 15px;
+	text-align: center;
+	transition: all 0.5s linear; 
+	-o-transition:all 0.5s linear;
+	-ms-transition:all 0.5s linear;
+	width: 400px; 
+}
+
+article p{
+	font: 30px;
+	font-weight: bold;
+	width: 100%; 
+}
+
+/*article:hover{
+	height: 400px;
+	width: 800px; 
+
+}*/
+
+article:hover{
+	background: black;
+	color: white;
+	transform: translate(5px,5px);
+	-o-transform: scale (5);
+
+}
