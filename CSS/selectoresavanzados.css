@@ -45,3 +45,37 @@ div > p{ /*solo hijos directos*/
 div p{ 
 	color: red;
 }
+/*Seleccionar sólo el elemento <p>
+que está inmediatamente después del
+elemento <h2> - Hermano adyacente*/
+h2 + p{
+	color:green;
+}
+/*Seleccionar sólo el elemento <p>
+que está inmediatamente después del
+elemento <h2> - Hermano adyacente*/
+h2 ~ p{
+	color:gray;
+}
+#resumen,#experimento,#pruebas,#resultados,#conclusiones
+{
+	color: tomato;
+}
+section:not(#referencias){
+	color: hotpink;
+}
+li:nth-child(odd){ /*impares*/
+	color: green;
+}
+li:nth-child(even){ /*pares*/
+	color: blue;
+}
+li:nth-child(5){ /*quinto elemento*/
+	color: red;
+}
+li:nth-last-child(1){ /*último elemento*/
+	color: yellow;
+}
+p:first-line{
+	font-weight: bold;
+}
