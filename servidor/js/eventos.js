@@ -1,12 +1,10 @@
-
-
 var inicioApp = function(){
 	var Aceptar = function(){
-		var usuario=$("txtUsuario").val();
-		var clave=$("txtclave").val();
+		var usuario=$("#txtUsuario").val();
+		var clave=$("#txtClave").val();
 		var parametros="opc=validaentrada"+
 						"&usuario="+usuario+
-						"&clave"+clave+
+						"&clave="+clave+
 						"&aleatorio="+Math.random();
 		$.ajax({
 			cache:false,

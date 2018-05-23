@@ -1,17 +1,21 @@
 <?php 
-include 'conexiones.php'
+include 'conexiones.php';
 function valida(){
+	$respuesta=false;
 	$usuario=$_POST["usuario"];
 	$clave	=md5($_POST["clave"]);
 	$con=conecta();
-	$consulta="select * from usuarios where usuario= '".$usuario."' and clave='".$clave. limit 1";
+	$consulta="select usuario,clave from usuarios where usuario= '".$usuario."' and clave='".$clave."' limit 1";
 	$resConsulta=mysqli_query($con,$consulta);
-	if(mysqli_num_rows($resConsulta))
-	 > 0){
+	if(mysqli_num_rows($resConsulta)>0)
+	{
 	 	$respuesta=true;
-}
-	$salidaJSON = array('respuesta' => $respuesta);
+    }
+    $salidaJSON = array('respuesta' => $respuesta);
 	print json_encode($salidaJSON);
+}
+
+	
 	
 	$opc=$_POST["opc"];
 	switch ($opc) {
@@ -22,4 +26,4 @@ function valida(){
 		default:
 			break;
 	}
- ?>
+?>
