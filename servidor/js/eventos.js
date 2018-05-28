@@ -1,11 +1,14 @@
 var inicioApp = function(){
 	var Aceptar = function(){
 		var usuario=$("#txtUsuario").val();
+		var nombre =$("#txtNombre").val();
 		var clave=$("#txtClave").val();
 		var parametros="opc=validaentrada"+
 						"&usuario="+usuario+
 						"&clave="+clave+
+						"&nombre="+nombre+
 						"&aleatorio="+Math.random();
+	if(usuario!="" && nombre!="" && clave!=""){
 		$.ajax({
 			cache:false,
 			type: "POST",
@@ -87,8 +90,20 @@ var inicioApp = function(){
 			alert("Llene todos los campos");
 		}
 	}
+	var Borrar = function(){
+		var usuario = $("#txtNombreUsuario").val();
+		var nombre  = $("#txtNombre").val();
+		var pregunta = prompt("Seguro de borrar a "+nombre+"? (si/no", "no");
+
+		if (pregunta != null && pregunta == "si"){
+			//Aquí va el AJAX . . . . 
+		}
+
+	}
+
 	$("#btnAceptar").on("click",Aceptar);
 	$("#txtNombreUsuario").on("keypress",tecladoNombreUsuario);
 	$("#btnGuardar").on("click",Guardar);
+}
 }
 $(document).ready(inicioApp);
